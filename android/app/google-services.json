@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "993166224200",
+    "firebase_url": "https://devmuscles-353ee-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "devmuscles-353ee",
+    "storage_bucket": "devmuscles-353ee.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:993166224200:android:d40583c3794e2e9fa3217d",
+        "android_client_info": {
+          "package_name": "com.example.fitness_clup"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvkY5AQ6EcxNEeVVn7k_qUv1dXeyc53v4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
