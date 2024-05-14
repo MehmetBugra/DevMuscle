@@ -1,6 +1,9 @@
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
+import 'package:fitness_clup/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
+import 'package:fitness_clup/variables/routes.dart';
 import 'package:fitness_clup/widgets/register_widgets/fields.dart';
 import 'package:fitness_clup/widgets/register_widgets/register/register_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -14,12 +17,16 @@ class Register extends StatefulWidget {
 class _RegisterState extends State<Register> {
   final _formKey = GlobalKey<FormState>();
 
+  late String _name;
+  late String _surname;
   late String _email;
   late String _password;
   late String _passwordConf;
 
   @override
   void initState() {
+    _name = "";
+    _surname = "";
     _email = "";
     _password = "";
     _passwordConf = "";
@@ -34,9 +41,13 @@ class _RegisterState extends State<Register> {
         key: _formKey,
         child: Column(
           children: [
-            MailField(
-              onSaved: (mail) => _email = mail!,
+            NameandSurnameField(
+              onSaved: (name) => _name = name!,
+              label: "Name",
             ),
+            NameandSurnameField(
+                onSaved: (surname) => _surname = surname!, label: "Surname"),
+            MailField(onSaved: (mail) => _email = mail!),
 
             PasswordField(
                 label: "Password",
@@ -59,14 +70,24 @@ class _RegisterState extends State<Register> {
 
             // Sign Up Button
             RegisterButton(
-              myOnPressed: () async {
-                if (_formKey.currentState!.validate()) {
-                  _formKey.currentState!.save();
-                  await FirebaseAuth.instance.createUserWithEmailAndPassword(
-                      email: _email, password: _password);
-
-                  await FirebaseAuth.instance.signInWithEmailAndPassword(
-                      email: _email, password: _password);
+              myOnPressed: () {
+                try {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    registerUserWithMailandPassword(
+                            _name, _surname, _password, _email)
+                        .whenComplete(() {
+                      Navigator.pushAndRemoveUntil(
+                          context,
+                          CupertinoPageRoute(
+                            builder: (context) => GetInfoDefaultPage(),
+                            settings: const RouteSettings(name: getInfoRoute),
+                          ),
+                          (route) => false);
+                    });
+                  }
+                } on Exception catch (e) {
+                  print("hata");
                 }
               },
             ),

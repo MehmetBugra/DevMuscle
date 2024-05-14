@@ -1,6 +1,7 @@
 import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/workout_categories/tabbar.dart';
-import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/workout_categories/workoutBringer.dart';
+import 'package:fitness_clup/variables/routes.dart';
+import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/tabbar.dart';
+import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/workoutBringer.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -33,9 +34,14 @@ class _WorkoutCategoriesState extends State<WorkoutCategories>
               "Workout Categories",
               style: TextStyles.HomeLeftSubtitleTextStyle(),
             ),
-            Text(
-              "See All",
-              style: TextStyles.HomeRightSubtitleTextStyle(),
+            GestureDetector(
+              onTap: () {
+                Navigator.pushNamed(context, allWorkoutCategoriesRoute);
+              },
+              child: Text(
+                "See All",
+                style: TextStyles.HomeRightSubtitleTextStyle(),
+              ),
             ),
           ],
         ),
@@ -47,11 +53,23 @@ class _WorkoutCategoriesState extends State<WorkoutCategories>
         SizedBox(
           height: 180,
           width: double.infinity,
-          child: TabBarView(controller: tabController, children: [
-            WorkoutBringer(level: "Beginner"),
-            WorkoutBringer(level: "Intermediate"),
-            WorkoutBringer(level: "Advance"),
-          ]),
+          child: TabBarView(
+            controller: tabController,
+            children: [
+              WorkoutBringer(
+                level: "Beginner",
+                yon: Axis.horizontal,
+              ),
+              WorkoutBringer(
+                level: "Intermediate",
+                yon: Axis.horizontal,
+              ),
+              WorkoutBringer(
+                level: "Advance",
+                yon: Axis.horizontal,
+              ),
+            ],
+          ),
         )
       ],
     );

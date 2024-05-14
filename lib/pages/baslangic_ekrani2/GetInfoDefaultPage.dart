@@ -1,12 +1,17 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitness_clup/components/styles.dart';
+import 'package:fitness_clup/pages/main/mainPage.dart';
+import 'package:fitness_clup/variables/routes.dart';
 import 'package:fitness_clup/widgets/GetInfo_widgets/activityLevel.dart';
 import 'package:fitness_clup/widgets/GetInfo_widgets/ageSpinner.dart';
 import 'package:fitness_clup/widgets/GetInfo_widgets/genders.dart';
 import 'package:fitness_clup/widgets/GetInfo_widgets/goalSpinner.dart';
 import 'package:fitness_clup/widgets/GetInfo_widgets/heightSpinner.dart';
 import 'package:fitness_clup/widgets/GetInfo_widgets/weightSpinner.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class GetInfoDefaultPage extends StatefulWidget {
@@ -18,12 +23,13 @@ class GetInfoDefaultPage extends StatefulWidget {
 
 class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
   int _page = 0;
-  int gender = 0;
+  String gender = "";
   int age = 0;
   int weight = 0;
   int height = 0;
   String goal = "";
-  int level = 0;
+  String level = "";
+  final db = FirebaseFirestore.instance;
 
   final List<String> _titleList = [
     "TELL US ABOUT YOURSELF!",
@@ -137,12 +143,29 @@ class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
                   )
                 : ElevatedButton(
                     onPressed: () {
-                      print("gender : $gender");
-                      print("age : $age");
-                      print("weight : $weight");
-                      print("height : $height");
-                      print("goal : $goal");
-                      print("level : $level");
+                      try {
+                        Map<Object, Object> data = {
+                          "Gender": gender,
+                          "Age": age,
+                          "Weight": weight,
+                          "Height": height,
+                          "Goal": goal,
+                          "Level": level
+                        };
+                        db
+                            .collection("users")
+                            .doc(FirebaseAuth.instance.currentUser!.uid)
+                            .update(data);
+                        Navigator.pushAndRemoveUntil(
+                            context,
+                            CupertinoPageRoute(
+                              builder: (context) => MainPage(),
+                              settings: const RouteSettings(name: mainRoute),
+                            ),
+                            (route) => false);
+                      } on Exception catch (e) {
+                        print("hata $e");
+                      }
                     },
                     child: Text("Start !")),
           ],
@@ -151,7 +174,7 @@ class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
     );
   }
 
-  void _onGenderSelected(int selectedGender) {
+  void _onGenderSelected(String selectedGender) {
     setState(() {
       gender = selectedGender; // Cinsiyeti sakla
     });
@@ -163,7 +186,7 @@ class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
     });
   }
 
-  void _onLevelSelected(int selectedLevel) {
+  void _onLevelSelected(String selectedLevel) {
     setState(() {
       level = selectedLevel;
     });

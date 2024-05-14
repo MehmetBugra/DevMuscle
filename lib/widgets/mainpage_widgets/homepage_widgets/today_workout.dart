@@ -1,4 +1,5 @@
 import 'package:fitness_clup/components/styles.dart';
+import 'package:fitness_clup/variables/routes.dart';
 import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
 import 'package:flutter/material.dart';
 
@@ -27,6 +28,7 @@ class TodayWorkoutPlan extends StatelessWidget {
           title: "Day 01 - Warm Up",
           subtitle: "29 mart 2023",
           width: double.infinity,
+          route: todayWorkoutRoute,
         ),
       ],
     );

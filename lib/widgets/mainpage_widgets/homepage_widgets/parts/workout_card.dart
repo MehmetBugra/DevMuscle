@@ -8,11 +8,13 @@ class WorkoutCard extends StatelessWidget {
   String title;
   String subtitle;
   double width;
+  String route;
   WorkoutCard({
     super.key,
     required this.title,
     required this.subtitle,
     required this.width,
+    required this.route,
   });
 
   @override
@@ -25,6 +27,7 @@ class WorkoutCard extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             print("object");
+            Navigator.pushNamed(context, route);
           },
           child: Stack(
             fit: StackFit.expand,

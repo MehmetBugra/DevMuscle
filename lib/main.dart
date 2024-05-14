@@ -1,18 +1,24 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:fitness_clup/pages/baslangic_ekrani/intro.dart';
+import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
 import 'package:fitness_clup/pages/main/mainPage.dart';
 import 'package:fitness_clup/pages/registerAndLogin/page.dart';
+import 'package:fitness_clup/router.dart';
+import 'package:fitness_clup/variables/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+
+FirebaseAuth auth = FirebaseAuth.instance;
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+
   // await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
   // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
   // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
@@ -28,8 +34,13 @@ class FitnessClup extends StatelessWidget {
     FlutterNativeSplash.remove();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      color: Color(0xff1C1C1E),
-      home: RegisterAndLoginPage(),
+      onGenerateRoute: myRouter.generateRoute,
+      theme: ThemeData(
+          scaffoldBackgroundColor: background_color,
+          appBarTheme: AppBarTheme(color: background_color)),
+      // initialRoute: homeRoute,
+      // color: Color(0xff1C1C1E),
+      home: auth.currentUser == null ? RegisterAndLoginPage() : MainPage(),
       // showPerformanceOverlay: true,
     );
   }

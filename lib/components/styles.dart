@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
+import 'package:fitness_clup/pages/main/pages/home/profile/privacyPolicy.dart';
+import 'package:fitness_clup/variables/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -172,6 +174,174 @@ class TextStyles {
     return GoogleFonts.openSans(
       fontWeight: FontWeight.w400,
       fontSize: 14,
+    );
+  }
+
+  static TextStyle WorkoutTitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutSubtitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 13,
+      color: Color(0xffD0FD3E),
+    );
+  }
+
+  static TextStyle WorkoutInfoTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 13,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutDescribeTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 15,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutCardTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 15,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle AllWorkoutCategoriesTitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 20,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsCalTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 34,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsCalSubtitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 15,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsPartsTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 17,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsPartsSubtitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 12,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsFinishedWorkoutTitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 17,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsFinishedWorkoutCardTitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 17,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle WorkoutsFinishedWorkoutCardSubtitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 13,
+      color: high_green,
+    );
+  }
+
+  static TextStyle ProfileNameTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w700,
+      fontSize: 32,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle ProfileSurnameTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 32,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle ProfileMenuTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 15,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle ProfileSignoutTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w600,
+      fontSize: 17,
+      color: Colors.red,
+    );
+  }
+
+  static TextStyle PrivacyPolicyTitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w700,
+      fontSize: 17,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle PrivacyPolicyTextStyle() {
+    return GoogleFonts.inter(
+      fontWeight: FontWeight.w400,
+      fontSize: 15,
+      color: Colors.grey,
+    );
+  }
+
+  static TextStyle ForgotPasswordTitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w700,
+      fontSize: 24,
+      color: Colors.white,
+    );
+  }
+
+  static TextStyle ForgotPasswordSubtitleTextStyle() {
+    return GoogleFonts.openSans(
+      fontWeight: FontWeight.w400,
+      fontSize: 10,
+      color: Colors.white,
     );
   }
 }

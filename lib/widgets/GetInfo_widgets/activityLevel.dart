@@ -3,7 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:numberpicker/numberpicker.dart';
 
 class LevelSpinner extends StatefulWidget {
-  final Function(int) onLevelSelected;
+  final Function(String) onLevelSelected;
   const LevelSpinner({super.key, required this.onLevelSelected});
 
   @override
@@ -47,7 +47,7 @@ class _LevelSpinnerState extends State<LevelSpinner> {
       onChanged: (value) {
         setState(() {
           _val = value;
-          widget.onLevelSelected(value);
+          widget.onLevelSelected(levelList[value]);
         });
       },
     );

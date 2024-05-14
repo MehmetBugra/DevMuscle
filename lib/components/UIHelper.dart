@@ -1,25 +1,21 @@
-// import 'package:fitness_clup/pages/chats.dart';
-// import 'package:fitness_clup/pages/instructors.dart';
-// import 'package:fitness_clup/pages/mainPage.dart';
-// import 'package:fitness_clup/pages/profile.dart';
-import 'package:fitness_clup/pages/main/pages/home.dart';
+import 'package:fitness_clup/pages/main/pages/home/home.dart';
 import 'package:fitness_clup/pages/main/pages/notifications.dart';
-import 'package:fitness_clup/pages/main/pages/profile.dart';
+import 'package:fitness_clup/pages/main/pages/home/profile/profile.dart';
 import 'package:fitness_clup/pages/main/pages/workouts.dart';
 import 'package:fitness_clup/widgets/intro_widgets/page.dart';
 import 'package:flutter/material.dart';
 
 class UIHelper {
-  static Widget PageChanger(int index) {
+  static Widget PageChanger(int index, userInfo) {
     switch (index) {
       case 0:
-        return HomePage();
+        return HomePage(userInfo: userInfo);
       case 1:
-        return WorkoutsPage();
+        return WorkoutsPage(userInfo: userInfo);
       case 2:
         return NotificationsPage();
       case 3:
-        return ProfilePage();
+        return ProfilePage(userInfo: userInfo);
       default:
         return const Placeholder();
     }

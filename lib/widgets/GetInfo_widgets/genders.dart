@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class Genders extends StatefulWidget {
-  final Function(int) onGenderSelected;
+  final Function(String) onGenderSelected;
   Genders({
     super.key,
     required this.onGenderSelected,
@@ -27,7 +27,7 @@ class _GendersState extends State<Genders> {
             setState(() {
               _Male = true;
               _Female = false;
-              widget.onGenderSelected(0);
+              widget.onGenderSelected("Male");
             });
           },
           child: CircleAvatar(
@@ -57,7 +57,7 @@ class _GendersState extends State<Genders> {
             setState(() {
               _Male = false;
               _Female = true;
-              widget.onGenderSelected(1);
+              widget.onGenderSelected("Female");
             });
           },
           child: CircleAvatar(

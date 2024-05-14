@@ -67,7 +67,14 @@ class _PasswordFieldState extends State<PasswordField> {
 
 class MailField extends StatefulWidget {
   void Function(String?) onSaved;
-  MailField({super.key, required this.onSaved});
+  bool readOnly;
+  String? initialValue;
+  MailField(
+      {Key? key,
+      required this.onSaved,
+      this.readOnly = false,
+      this.initialValue = null})
+      : super(key: key);
 
   @override
   State<MailField> createState() => _MailFieldState();
@@ -83,6 +90,7 @@ class _MailFieldState extends State<MailField> {
     return TextFormField(
       focusNode: _focusNodeMail,
       onSaved: widget.onSaved,
+      readOnly: widget.readOnly,
       style: const TextStyle(color: Colors.white),
       autocorrect: true,
       keyboardType: TextInputType.emailAddress,
@@ -90,6 +98,7 @@ class _MailFieldState extends State<MailField> {
           InputDecorations.RegisterLoginInputDec("E-Mail", _emailTextColor)
               .copyWith(suffixIcon: Icon(Icons.mail)),
       validator: ValidationBuilder().email().minLength(5).maxLength(50).build(),
+      initialValue: widget.initialValue,
     );
   }
 
@@ -103,6 +112,46 @@ class _MailFieldState extends State<MailField> {
     setState(() {
       _emailTextColor =
           _focusNodeMail.hasFocus ? Color(0xffD0FD3E) : Colors.white;
+    });
+  }
+}
+
+class NameandSurnameField extends StatefulWidget {
+  void Function(String?) onSaved;
+  String label;
+  String initialValue;
+  NameandSurnameField(
+      {Key? key,
+      required this.onSaved,
+      required this.label,
+      this.initialValue = ""})
+      : super();
+
+  @override
+  State<NameandSurnameField> createState() => _NameandSurnameFieldState();
+}
+
+class _NameandSurnameFieldState extends State<NameandSurnameField> {
+  FocusNode _focusNode = FocusNode();
+  Color _textColor = Colors.white;
+  @override
+  Widget build(BuildContext context) {
+    return TextFormField(
+      focusNode: _focusNode,
+      onSaved: widget.onSaved,
+      style: const TextStyle(color: Colors.white),
+      autocorrect: true,
+      keyboardType: TextInputType.emailAddress,
+      decoration:
+          InputDecorations.RegisterLoginInputDec(widget.label, _textColor),
+      validator: ValidationBuilder().minLength(5).maxLength(20).build(),
+      initialValue: widget.initialValue,
+    );
+  }
+
+  void _onFocusChange() {
+    setState(() {
+      _textColor = _focusNode.hasFocus ? Color(0xffD0FD3E) : Colors.white;
     });
   }
 }
