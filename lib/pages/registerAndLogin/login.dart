@@ -2,6 +2,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:fitness_clup/components/styles.dart';
 import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
 import 'package:fitness_clup/pages/main/mainPage.dart';
+import 'package:fitness_clup/variables/colors.dart';
 import 'package:fitness_clup/variables/routes.dart';
 import 'package:fitness_clup/widgets/register_widgets/fields.dart';
 import 'package:fitness_clup/widgets/register_widgets/login/login_button.dart';
@@ -78,12 +79,22 @@ class _LoginState extends State<Login> {
                               context: context,
                               builder: (context) {
                                 return AlertDialog(
-                                  title: Text("Kullanıcı Bulunamadı."),
-                                  content: Text("E-Posta veya şifre hatalı."),
+                                  title: const Text(
+                                    "Error",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
+                                  backgroundColor: background_color,
+                                  content: const Text(
+                                    "Email or password is incorrect.",
+                                    style: TextStyle(color: Colors.white),
+                                  ),
                                   actions: [
                                     TextButton(
                                       onPressed: () => Navigator.pop(context),
-                                      child: Text("Tamam"),
+                                      child: const Text(
+                                        "OK",
+                                        style: TextStyle(color: Colors.white),
+                                      ),
                                     )
                                   ],
                                 );

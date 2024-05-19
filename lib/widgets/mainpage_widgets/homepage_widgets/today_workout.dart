@@ -1,4 +1,5 @@
 import 'package:fitness_clup/components/styles.dart';
+import 'package:fitness_clup/functions/exercises/exercises.dart';
 import 'package:fitness_clup/variables/routes.dart';
 import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
 import 'package:flutter/material.dart';
@@ -18,17 +19,16 @@ class TodayWorkoutPlan extends StatelessWidget {
               style: TextStyles.HomeLeftSubtitleTextStyle(),
             ),
             Text(
-              "Tariiih",
+              "${DateTime.now().day}/${DateTime.now().month}/${DateTime.now().year}",
               style: TextStyles.HomeRightSubtitleTextStyle(),
             ),
           ],
         ),
         const SizedBox(height: 17),
         WorkoutCard(
-          title: "Day 01 - Warm Up",
-          subtitle: "29 mart 2023",
           width: double.infinity,
-          route: todayWorkoutRoute,
+          route: workoutPageRoute,
+          exercise: getExercises()["Beginner"][0],
         ),
       ],
     );

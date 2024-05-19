@@ -2,8 +2,16 @@ import 'package:fitness_clup/components/styles.dart';
 import 'package:fitness_clup/variables/colors.dart';
 import 'package:flutter/material.dart';
 
-class FinishedWorkoutCard extends StatelessWidget {
-  const FinishedWorkoutCard({super.key});
+class FinishedWorkoutsCard extends StatelessWidget {
+  String exTitle;
+  String level;
+  int cal;
+  FinishedWorkoutsCard({
+    super.key,
+    required this.exTitle,
+    required this.cal,
+    required this.level,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -11,11 +19,11 @@ class FinishedWorkoutCard extends StatelessWidget {
       color: button_color,
       child: ListTile(
         title: Text(
-          "Bir Antrenman ismi",
+          exTitle,
           style: TextStyles.WorkoutsFinishedWorkoutCardTitleTextStyle(),
         ),
         subtitle: Text(
-          "Dakikası",
+          "CAL: $cal | LEVEL: $level",
           style: TextStyles.WorkoutsFinishedWorkoutCardSubtitleTextStyle(),
         ),
         trailing: Icon(Icons.check_box, color: high_green),

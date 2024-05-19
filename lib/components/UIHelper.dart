@@ -1,7 +1,7 @@
+import 'package:fitness_clup/pages/main/pages/chat/chatPage.dart';
 import 'package:fitness_clup/pages/main/pages/home/home.dart';
-import 'package:fitness_clup/pages/main/pages/notifications.dart';
 import 'package:fitness_clup/pages/main/pages/home/profile/profile.dart';
-import 'package:fitness_clup/pages/main/pages/workouts.dart';
+import 'package:fitness_clup/pages/main/pages/myWorkouts/workouts.dart';
 import 'package:fitness_clup/widgets/intro_widgets/page.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +13,7 @@ class UIHelper {
       case 1:
         return WorkoutsPage(userInfo: userInfo);
       case 2:
-        return NotificationsPage();
+        return ChatPage();
       case 3:
         return ProfilePage(userInfo: userInfo);
       default:

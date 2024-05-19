@@ -1,2 +1,5 @@
 flutter_native_splash:
-  color: "#1C1C1E"
+  color: "#042a49"  # Arka plan rengi
+  image: assets/images/appIcon.png  # Splash ekranında gösterilecek resim
+  android: true  # Android desteğini etkinleştir
+  ios: true  # iOS desteğini etkinleştir

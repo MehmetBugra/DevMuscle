@@ -5,16 +5,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class WorkoutCard extends StatelessWidget {
-  String title;
-  String subtitle;
   double width;
   String route;
+  Map exercise;
   WorkoutCard({
     super.key,
-    required this.title,
-    required this.subtitle,
     required this.width,
     required this.route,
+    required this.exercise,
   });
 
   @override
@@ -27,7 +25,7 @@ class WorkoutCard extends StatelessWidget {
         child: GestureDetector(
           onTap: () {
             print("object");
-            Navigator.pushNamed(context, route);
+            Navigator.pushNamed(context, route, arguments: exercise);
           },
           child: Stack(
             fit: StackFit.expand,
@@ -46,11 +44,11 @@ class WorkoutCard extends StatelessWidget {
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         Text(
-                          title,
+                          exercise["title"],
                           style: TextStyles.TodayWorkoutCardTitleTextStyle(),
                         ),
                         Text(
-                          "| $subtitle",
+                          "| ${exercise["subtitle"]}",
                           style: TextStyles.TodayWorkoutCardTimeTextStyle(),
                         ),
                       ],

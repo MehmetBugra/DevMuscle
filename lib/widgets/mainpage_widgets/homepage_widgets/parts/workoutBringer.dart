@@ -1,5 +1,6 @@
 // ignore_for_file: must_be_immutable
 
+import 'package:fitness_clup/functions/exercises/exercises.dart';
 import 'package:fitness_clup/variables/routes.dart';
 import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
 import 'package:flutter/material.dart';
@@ -7,22 +8,29 @@ import 'package:flutter/material.dart';
 class WorkoutBringer extends StatelessWidget {
   String level;
   Axis yon;
-  WorkoutBringer({super.key, required this.level, required this.yon});
+  bool all;
+  WorkoutBringer({
+    Key? key,
+    required this.level,
+    required this.yon,
+    this.all = true,
+  });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    Map exercises = getExercises()[level];
+    return SizedBox(
       height: 200,
       width: double.infinity,
       child: ListView.builder(
         scrollDirection: yon,
-        itemCount: 10,
+        itemCount: all ? exercises.length : 2,
         itemBuilder: (context, index) {
+          var ex = exercises[index];
           return WorkoutCard(
-            title: level,
-            subtitle: "subtitle",
+            exercise: ex,
             width: 350,
-            route: todayWorkoutRoute,
+            route: workoutPageRoute,
           );
         },
       ),

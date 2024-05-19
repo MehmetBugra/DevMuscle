@@ -47,24 +47,29 @@ class ForgotPassword extends StatelessWidget {
             Align(
               alignment: Alignment.bottomCenter,
               child: ElevatedButton(
-                  style: ButtonStyle(
-                    backgroundColor: MaterialStatePropertyAll(high_green),
-                  ),
-                  onPressed: () {
-                    if (_formKey.currentState!.validate()) {
-                      _formKey.currentState!.save();
-                      try {
-                        FirebaseAuth.instance
-                            .sendPasswordResetEmail(email: _email);
-                        Navigator.popUntil(context,
-                            ModalRoute.withName(registerAndLoginRoute));
-                      } catch (e) {}
-                    }
-                  },
-                  child: Text(
-                    "Send",
-                    style: TextStyles.IntroButtonText(),
-                  )),
+                style: ButtonStyle(
+                  backgroundColor: MaterialStatePropertyAll(high_green),
+                ),
+                onPressed: () {
+                  if (_formKey.currentState!.validate()) {
+                    _formKey.currentState!.save();
+                    try {
+                      FirebaseAuth.instance
+                          .sendPasswordResetEmail(email: _email);
+                      ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+                        content:
+                            Text("We send a mail to reset your password !"),
+                        duration: Duration(seconds: 3),
+                      ));
+                      Navigator.pop(context);
+                    } catch (e) {}
+                  }
+                },
+                child: Text(
+                  "Send",
+                  style: TextStyles.IntroButtonText(),
+                ),
+              ),
             )
           ],
         ),

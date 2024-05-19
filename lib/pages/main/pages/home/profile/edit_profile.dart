@@ -2,9 +2,7 @@ import 'package:fitness_clup/components/styles.dart';
 import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
 import 'package:fitness_clup/variables/colors.dart';
 import 'package:fitness_clup/widgets/register_widgets/fields.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class EditProfilePage extends StatelessWidget {
   String name;
@@ -83,18 +81,22 @@ class EditProfilePage extends StatelessWidget {
                 ],
               ),
             ),
-            SizedBox(height: 30),
+            const SizedBox(height: 30),
             ElevatedButton(
-              onPressed: () {
+              onPressed: () async {
                 if (_formKey.currentState!.validate()) {
                   _formKey.currentState!.save();
-                  updateUserInfo(
+                  await updateUserInfo(
                     {
                       "Name": name,
                       "Surname": surname,
                     },
                   );
-                  showAboutDialog(context: context);
+                  ScaffoldMessenger.of(context).showSnackBar(SnackBar(
+                    content: Text("Changes have been saved."),
+                    backgroundColor: button_color,
+                  ));
+                  Navigator.pop(context);
                 }
               },
               style: ButtonStyle(

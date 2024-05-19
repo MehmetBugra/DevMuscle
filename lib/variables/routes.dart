@@ -1,5 +1,5 @@
 const String mainRoute = '/';
-const String todayWorkoutRoute = '/todayWorkout';
+const String workoutPageRoute = '/workoutPage';
 const String allWorkoutCategoriesRoute = '/allWorkoutCategories';
 const String getInfoRoute = '/getInfoRoute';
 const String registerAndLoginRoute = '/registerAndLogin';

@@ -1,6 +1,5 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
 import 'package:fitness_clup/pages/main/mainPage.dart';
 import 'package:fitness_clup/pages/registerAndLogin/page.dart';
 import 'package:fitness_clup/router.dart';
@@ -10,19 +9,20 @@ import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 FirebaseAuth auth = FirebaseAuth.instance;
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
+
+  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
+  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
 
-  // await FirebaseAuth.instance.useAuthEmulator('localhost', 9099);
-  // WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  // FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
-  print("object");
   runApp(FitnessClup());
 }
 
@@ -31,7 +31,6 @@ class FitnessClup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    FlutterNativeSplash.remove();
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       onGenerateRoute: myRouter.generateRoute,

@@ -8,6 +8,7 @@ import "package:fitness_clup/variables/routes.dart";
 import "package:fitness_clup/widgets/mainpage_widgets/bottomNavBar.dart";
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
+import "package:flutter_native_splash/flutter_native_splash.dart";
 
 class MainPage extends StatefulWidget {
   MainPage({super.key});
@@ -23,7 +24,17 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     _userInfoFuture = getUserInfo();
+    initialization();
     super.initState();
+  }
+
+  void initialization() async {
+    print("2 saniye");
+    await Future.delayed(Duration(seconds: 1));
+
+    print("1 saniye");
+    await Future.delayed(Duration(seconds: 1));
+    FlutterNativeSplash.remove();
   }
 
   @override
@@ -41,7 +52,7 @@ class _MainPageState extends State<MainPage> {
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
               // Future henüz tamamlanmadıysa, yüklenme göstergesi döndür
-              return CircularProgressIndicator();
+              return const Center(child: CircularProgressIndicator());
             } else if (snapshot.hasError) {
               // Future hata ile tamamlandıysa, hata mesajını göster
               return Center(
@@ -49,8 +60,8 @@ class _MainPageState extends State<MainPage> {
               );
             } else {
               // Future başarıyla tamamlandıysa, veriyi kullanarak arayüzü oluştur
+
               final userInformation = snapshot.data;
-              print(userInformation);
               return UIHelper.PageChanger(page, userInformation);
             }
           },
@@ -60,6 +71,7 @@ class _MainPageState extends State<MainPage> {
           onPressed: (value) {
             setState(() {
               page = value;
+              _userInfoFuture = getUserInfo();
             });
           },
         ),
@@ -83,9 +95,13 @@ class _MainPageState extends State<MainPage> {
         actions: [
           TextButton(
             onPressed: () {
-              userSignOut();
-              Navigator.popUntil(
-                  context, ModalRoute.withName(registerAndLoginRoute));
+              userSignOut().whenComplete(() {
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    CupertinoPageRoute(
+                        builder: (context) => const RegisterAndLoginPage()),
+                    ModalRoute.withName(registerAndLoginRoute));
+              });
             },
             child: Text(
               "Sign Out",

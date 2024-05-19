@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_database/firebase_database.dart';
+import 'package:cosmos/cosmos.dart';
 
 final FirebaseFirestore db = FirebaseFirestore.instance;
 final FirebaseAuth auth = FirebaseAuth.instance;
@@ -34,7 +35,12 @@ Future<void> registerUserWithMailandPassword(
     var result = await auth.createUserWithEmailAndPassword(
         email: email, password: password);
 
-    createUser(result.user!.uid, name, surname, email);
+    await createUser(result.user!.uid, name, surname, email);
+    await CosmosFirebase.signUp(email: email, password: password, userDatas: [
+      email,
+      password,
+      CosmosTime.getNowTimeString(),
+    ]);
   } catch (e) {
     print(e);
   }
@@ -43,6 +49,8 @@ Future<void> registerUserWithMailandPassword(
 Future<void> userSignIn(String email, String password) async {
   try {
     await auth.signInWithEmailAndPassword(email: email, password: password);
+    auth.signInWithEmailAndPassword(email: email, password: password);
+    CosmosFirebase.signIn(email: email, password: password);
   } catch (e) {
     print(e);
     throw e;
@@ -52,6 +60,7 @@ Future<void> userSignIn(String email, String password) async {
 Future<void> userSignOut() async {
   try {
     await auth.signOut();
+    await CosmosFirebase.logout(() {}, (e) {});
   } catch (e) {
     print(e);
   }

@@ -59,14 +59,17 @@ class _WorkoutCategoriesState extends State<WorkoutCategories>
               WorkoutBringer(
                 level: "Beginner",
                 yon: Axis.horizontal,
+                all: false,
               ),
               WorkoutBringer(
                 level: "Intermediate",
                 yon: Axis.horizontal,
+                all: false,
               ),
               WorkoutBringer(
                 level: "Advance",
                 yon: Axis.horizontal,
+                all: false,
               ),
             ],
           ),

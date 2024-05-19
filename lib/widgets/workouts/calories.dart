@@ -4,15 +4,14 @@ import 'package:flutter/material.dart';
 import 'package:syncfusion_flutter_gauges/gauges.dart';
 
 class Calories extends StatefulWidget {
-  const Calories({super.key});
+  double calValue;
+  Calories({super.key, required this.calValue});
 
   @override
   State<Calories> createState() => _CaloriesState();
 }
 
 class _CaloriesState extends State<Calories> {
-  double _calValue = 8000;
-
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -31,7 +30,7 @@ class _CaloriesState extends State<Calories> {
             ),
             pointers: [
               RangePointer(
-                value: _calValue,
+                value: widget.calValue,
                 color: button_color,
                 gradient: SweepGradient(
                   colors: [
@@ -48,7 +47,7 @@ class _CaloriesState extends State<Calories> {
                 widget: Column(
                   children: [
                     Text(
-                      _calValue.toStringAsFixed(0) + " Cal",
+                      widget.calValue.toStringAsFixed(0) + " Cal",
                       style: TextStyles.WorkoutsCalTextStyle(),
                     ),
                     Text(

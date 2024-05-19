@@ -3,7 +3,8 @@ import 'package:fitness_clup/widgets/workouts/carouselCal/carouselCal.dart';
 import 'package:flutter/material.dart';
 
 class myCalendar extends StatefulWidget {
-  const myCalendar({super.key});
+  Function(DateTime) onChanged;
+  myCalendar({super.key, required this.onChanged});
 
   @override
   State<myCalendar> createState() => _myCalendarState();
@@ -24,11 +25,11 @@ class _myCalendarState extends State<myCalendar> {
       child: Padding(
         padding: EdgeInsets.only(top: 60, left: 24, right: 24, bottom: 24),
         child: carouselCal(
-          onChanged: (day) {
+          onChanged: (DateTime date) {
             setState(() {
-              _selectedDay = day;
-              print(_selectedDay);
+              _selectedDay = date;
             });
+            widget.onChanged(date);
           },
           firstDate: DateTime(2020),
           lastDate: DateTime.now(),

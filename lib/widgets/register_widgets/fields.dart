@@ -15,7 +15,7 @@ class PasswordField extends StatefulWidget {
 }
 
 class _PasswordFieldState extends State<PasswordField> {
-  bool _isOpen = false;
+  bool _isOpen = true;
   Color _passwordTextColor = Colors.white;
 
   FocusNode _focusNodePassword = FocusNode();
@@ -48,10 +48,7 @@ class _PasswordFieldState extends State<PasswordField> {
     return GestureDetector(
         onTap: () {
           setState(() {
-            if (_isOpen)
-              _isOpen = false;
-            else
-              _isOpen = true;
+            _isOpen = !_isOpen;
           });
         },
         child: Icon(_isOpen ? Icons.visibility_off : Icons.visibility));

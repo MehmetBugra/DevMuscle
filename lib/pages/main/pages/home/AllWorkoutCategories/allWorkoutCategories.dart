@@ -58,9 +58,12 @@ class _AllWorkoutCategoriesState extends State<AllWorkoutCategories>
               child: TabBarView(
                 controller: _tabController,
                 children: [
-                  WorkoutBringer(level: "Beginner", yon: Axis.vertical),
-                  WorkoutBringer(level: "Intermediate", yon: Axis.vertical),
-                  WorkoutBringer(level: "Advance", yon: Axis.vertical),
+                  WorkoutBringer(
+                      level: "Beginner", yon: Axis.vertical, all: true),
+                  WorkoutBringer(
+                      level: "Intermediate", yon: Axis.vertical, all: true),
+                  WorkoutBringer(
+                      level: "Advance", yon: Axis.vertical, all: true),
                 ],
               ),
             ),

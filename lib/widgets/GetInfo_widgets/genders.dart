@@ -15,8 +15,17 @@ class Genders extends StatefulWidget {
 }
 
 class _GendersState extends State<Genders> {
-  bool _Male = true;
-  bool _Female = false;
+  late bool _Male;
+  late bool _Female;
+  late String _gender;
+
+  @override
+  void initState() {
+    _Male = true;
+    _Female = false;
+    _gender = "";
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +36,8 @@ class _GendersState extends State<Genders> {
             setState(() {
               _Male = true;
               _Female = false;
-              widget.onGenderSelected("Male");
+              _gender = "Male";
+              widget.onGenderSelected(_gender);
             });
           },
           child: CircleAvatar(
@@ -57,7 +67,9 @@ class _GendersState extends State<Genders> {
             setState(() {
               _Male = false;
               _Female = true;
-              widget.onGenderSelected("Female");
+              _gender = "Female";
+
+              widget.onGenderSelected(_gender);
             });
           },
           child: CircleAvatar(

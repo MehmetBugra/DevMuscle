@@ -2,7 +2,7 @@ import 'package:fitness_clup/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
 import 'package:fitness_clup/pages/main/mainPage.dart';
 import 'package:fitness_clup/pages/main/pages/404.dart';
 import 'package:fitness_clup/pages/main/pages/home/AllWorkoutCategories/allWorkoutCategories.dart';
-import 'package:fitness_clup/pages/main/pages/home/WorkoutPlan/Workout.dart';
+import 'package:fitness_clup/pages/workout/Workout.dart';
 import 'package:fitness_clup/pages/main/pages/home/profile/edit_profile.dart';
 import 'package:fitness_clup/pages/main/pages/home/profile/privacyPolicy.dart';
 import 'package:fitness_clup/pages/registerAndLogin/forgotpassword/forgotPassword.dart';
@@ -19,22 +19,27 @@ class myRouter {
         );
 
       case allWorkoutCategoriesRoute:
-        var data = settings.arguments; // Sayfaya gelecek bilgileri böyle alıyoz
         return CupertinoPageRoute(
           builder: (context) => AllWorkoutCategories(),
         );
 
-      case todayWorkoutRoute:
-        return CupertinoPageRoute(
-          builder: (context) => WorkoutPage(),
-        );
+      case workoutPageRoute:
+        var args = settings.arguments;
+        if (args != null && args is Map<String, dynamic>) {
+          print(args);
+          var exercise = args;
+          print(exercise);
+          return CupertinoPageRoute(
+            builder: (context) => WorkoutPage(
+              exercise: exercise,
+            ),
+          );
+        }
 
       case getInfoRoute:
         return CupertinoPageRoute(builder: (context) => GetInfoDefaultPage());
       case registerAndLoginRoute:
-        return CupertinoPageRoute(
-          builder: (context) => RegisterAndLoginPage(),
-        );
+        return CupertinoPageRoute(builder: (context) => RegisterAndLoginPage());
       case privacyPolicyRoute:
         return CupertinoPageRoute(builder: (context) => PrivacyPolicy());
 

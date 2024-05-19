@@ -22,13 +22,13 @@ class GetInfoDefaultPage extends StatefulWidget {
 }
 
 class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
-  int _page = 0;
-  String gender = "";
-  int age = 0;
-  int weight = 0;
-  int height = 0;
-  String goal = "";
-  String level = "";
+  late int _page = 0;
+  late String gender;
+  late int age;
+  late int weight;
+  late int height;
+  late String goal;
+  late String level;
   final db = FirebaseFirestore.instance;
 
   final List<String> _titleList = [
@@ -39,6 +39,17 @@ class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
     "WHAT'S YOUR GOAL?",
     "PHYSICAL ACTIVITY LEVEL?",
   ];
+
+  @override
+  void initState() {
+    gender = "Male";
+    age = 22;
+    weight = 70;
+    height = 183;
+    goal = "Get Fitter";
+    level = "Intermediate";
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -142,6 +153,7 @@ class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
                     ),
                   )
                 : ElevatedButton(
+                    style: ButtonStyles.RegisterLoginButtonStyle(),
                     onPressed: () {
                       try {
                         Map<Object, Object> data = {
@@ -176,7 +188,7 @@ class _GetInfoDefaultPageState extends State<GetInfoDefaultPage> {
 
   void _onGenderSelected(String selectedGender) {
     setState(() {
-      gender = selectedGender; // Cinsiyeti sakla
+      gender = selectedGender;
     });
   }
 
