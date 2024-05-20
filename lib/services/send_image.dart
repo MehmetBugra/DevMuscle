@@ -1,5 +1,5 @@
 import 'package:cosmos/cosmos.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 
 Future<void> sendImage(BuildContext context, String image) async {

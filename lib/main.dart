@@ -1,23 +1,19 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:fitness_clup/pages/main/mainPage.dart';
-import 'package:fitness_clup/pages/registerAndLogin/page.dart';
-import 'package:fitness_clup/router.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/pages/main/mainPage.dart';
+import 'package:dev_muscle/pages/registerAndLogin/page.dart';
+import 'package:dev_muscle/router.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'firebase_options.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+// import 'package:flutter_native_splash/flutter_native_splash.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 FirebaseAuth auth = FirebaseAuth.instance;
 
 void main(List<String> args) async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  WidgetsBinding widgetsBinding = WidgetsFlutterBinding.ensureInitialized();
-  FlutterNativeSplash.preserve(widgetsBinding: widgetsBinding);
 
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,

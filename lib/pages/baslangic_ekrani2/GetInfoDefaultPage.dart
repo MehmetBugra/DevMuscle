@@ -2,15 +2,15 @@
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/pages/main/mainPage.dart';
-import 'package:fitness_clup/variables/routes.dart';
-import 'package:fitness_clup/widgets/GetInfo_widgets/activityLevel.dart';
-import 'package:fitness_clup/widgets/GetInfo_widgets/ageSpinner.dart';
-import 'package:fitness_clup/widgets/GetInfo_widgets/genders.dart';
-import 'package:fitness_clup/widgets/GetInfo_widgets/goalSpinner.dart';
-import 'package:fitness_clup/widgets/GetInfo_widgets/heightSpinner.dart';
-import 'package:fitness_clup/widgets/GetInfo_widgets/weightSpinner.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/pages/main/mainPage.dart';
+import 'package:dev_muscle/variables/routes.dart';
+import 'package:dev_muscle/widgets/GetInfo_widgets/activityLevel.dart';
+import 'package:dev_muscle/widgets/GetInfo_widgets/ageSpinner.dart';
+import 'package:dev_muscle/widgets/GetInfo_widgets/genders.dart';
+import 'package:dev_muscle/widgets/GetInfo_widgets/goalSpinner.dart';
+import 'package:dev_muscle/widgets/GetInfo_widgets/heightSpinner.dart';
+import 'package:dev_muscle/widgets/GetInfo_widgets/weightSpinner.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

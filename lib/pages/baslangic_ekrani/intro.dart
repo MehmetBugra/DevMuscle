@@ -1,8 +1,8 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
 
-import 'package:fitness_clup/widgets/intro_widgets/indicator.dart';
+import 'package:dev_muscle/widgets/intro_widgets/indicator.dart';
 import 'package:flutter/material.dart';
-import 'package:fitness_clup/components/UIHelper.dart';
+import 'package:dev_muscle/components/UIHelper.dart';
 
 class Intro extends StatefulWidget {
   const Intro({super.key});

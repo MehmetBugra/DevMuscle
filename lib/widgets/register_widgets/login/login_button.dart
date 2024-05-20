@@ -1,4 +1,4 @@
-import 'package:fitness_clup/components/styles.dart';
+import 'package:dev_muscle/components/styles.dart';
 import 'package:flutter/material.dart';
 
 class LoginButton extends StatelessWidget {

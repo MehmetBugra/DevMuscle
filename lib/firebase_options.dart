@@ -46,41 +46,49 @@ class DefaultFirebaseOptions {
     messagingSenderId: '993166224200',
     projectId: 'devmuscles-353ee',
     authDomain: 'devmuscles-353ee.firebaseapp.com',
+    databaseURL: 'https://devmuscles-353ee-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'devmuscles-353ee.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyBvkY5AQ6EcxNEeVVn7k_qUv1dXeyc53v4',
-    appId: '1:993166224200:android:d40583c3794e2e9fa3217d',
+    appId: '1:993166224200:android:dd513fbd0d065e23a3217d',
     messagingSenderId: '993166224200',
     projectId: 'devmuscles-353ee',
+    databaseURL: 'https://devmuscles-353ee-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'devmuscles-353ee.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
     apiKey: 'AIzaSyDsNpw7ua37ruEGyBatNJpPtwU1cgy8LoQ',
-    appId: '1:993166224200:ios:cf40da8874d2d7a2a3217d',
+    appId: '1:993166224200:ios:31b612490218ea42a3217d',
     messagingSenderId: '993166224200',
     projectId: 'devmuscles-353ee',
+    databaseURL: 'https://devmuscles-353ee-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'devmuscles-353ee.appspot.com',
-    iosBundleId: 'com.example.fitnessClup',
+    iosClientId: '993166224200-8qe3uk5i5r7pd52qrjh4mfjlpsrrvujp.apps.googleusercontent.com',
+    iosBundleId: 'com.example.devMuscle',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
     apiKey: 'AIzaSyDsNpw7ua37ruEGyBatNJpPtwU1cgy8LoQ',
-    appId: '1:993166224200:ios:cf40da8874d2d7a2a3217d',
+    appId: '1:993166224200:ios:31b612490218ea42a3217d',
     messagingSenderId: '993166224200',
     projectId: 'devmuscles-353ee',
+    databaseURL: 'https://devmuscles-353ee-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'devmuscles-353ee.appspot.com',
-    iosBundleId: 'com.example.fitnessClup',
+    iosClientId: '993166224200-8qe3uk5i5r7pd52qrjh4mfjlpsrrvujp.apps.googleusercontent.com',
+    iosBundleId: 'com.example.devMuscle',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
     apiKey: 'AIzaSyD5qbdherUoFi-mI2rTmLq7ignhZtR8ruA',
-    appId: '1:993166224200:web:f239a7f8ea3c957da3217d',
+    appId: '1:993166224200:web:5deb3d0599e02a7ca3217d',
     messagingSenderId: '993166224200',
     projectId: 'devmuscles-353ee',
     authDomain: 'devmuscles-353ee.firebaseapp.com',
+    databaseURL: 'https://devmuscles-353ee-default-rtdb.europe-west1.firebasedatabase.app',
     storageBucket: 'devmuscles-353ee.appspot.com',
   );
+
 }

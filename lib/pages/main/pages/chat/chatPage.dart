@@ -1,9 +1,9 @@
 import 'package:cosmos/cosmos.dart';
-import 'package:fitness_clup/services/get_chat.dart';
-import 'package:fitness_clup/services/select_img.dart';
-import 'package:fitness_clup/services/send_message.dart';
-import 'package:fitness_clup/variables/chat.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/services/get_chat.dart';
+import 'package:dev_muscle/services/select_img.dart';
+import 'package:dev_muscle/services/send_message.dart';
+import 'package:dev_muscle/variables/chat.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

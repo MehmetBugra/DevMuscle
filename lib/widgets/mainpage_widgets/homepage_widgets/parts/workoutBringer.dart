@@ -1,8 +1,8 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:fitness_clup/functions/exercises/exercises.dart';
-import 'package:fitness_clup/variables/routes.dart';
-import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
+import 'package:dev_muscle/functions/exercises/exercises.dart';
+import 'package:dev_muscle/variables/routes.dart';
+import 'package:dev_muscle/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutBringer extends StatelessWidget {

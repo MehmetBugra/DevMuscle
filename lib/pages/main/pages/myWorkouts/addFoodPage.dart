@@ -1,6 +1,6 @@
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/functions/foods/foods.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/functions/foods/foods.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 
 class AddFoodPage extends StatefulWidget {

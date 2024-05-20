@@ -1,6 +1,6 @@
 import 'package:cosmos/cosmos.dart';
-import 'package:fitness_clup/services/send_image.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/services/send_image.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 
 Future<void> selectImage(BuildContext context) async {

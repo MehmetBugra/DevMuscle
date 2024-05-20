@@ -1,10 +1,10 @@
 import 'dart:ui';
 
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/pages/registerAndLogin/login.dart';
-import 'package:fitness_clup/pages/registerAndLogin/register.dart';
-import 'package:fitness_clup/widgets/appIcon.dart';
-import 'package:fitness_clup/widgets/register_widgets/register/register_googleButton.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/pages/registerAndLogin/login.dart';
+import 'package:dev_muscle/pages/registerAndLogin/register.dart';
+import 'package:dev_muscle/widgets/appIcon.dart';
+import 'package:dev_muscle/widgets/register_widgets/register/register_googleButton.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

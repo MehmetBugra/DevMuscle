@@ -1,7 +1,7 @@
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/functions/exercises/exercises.dart';
-import 'package:fitness_clup/variables/routes.dart';
-import 'package:fitness_clup/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/functions/exercises/exercises.dart';
+import 'package:dev_muscle/variables/routes.dart';
+import 'package:dev_muscle/widgets/mainpage_widgets/homepage_widgets/parts/workout_card.dart';
 import 'package:flutter/material.dart';
 
 class TodayWorkoutPlan extends StatelessWidget {

@@ -1,8 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/variables/colors.dart';
-import 'package:fitness_clup/variables/routes.dart';
-import 'package:fitness_clup/widgets/register_widgets/fields.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/variables/colors.dart';
+import 'package:dev_muscle/variables/routes.dart';
+import 'package:dev_muscle/widgets/register_widgets/fields.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

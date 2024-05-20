@@ -26,7 +26,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.example.fitness_clup"
+    namespace "com.example.dev_muscle"
     compileSdk flutter.compileSdkVersion
     ndkVersion flutter.ndkVersion
 
@@ -45,7 +45,7 @@ android {
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.fitness_clup"
+        applicationId "com.example.dev_muscle"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -68,6 +68,4 @@ flutter {
     source '../..'
 }
 
-dependencies {
-    implementation 'com.android.support:multidex:1.0.3'
-}
+dependencies {}

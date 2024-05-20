@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names, must_be_immutable
 
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

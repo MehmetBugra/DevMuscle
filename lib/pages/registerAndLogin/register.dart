@@ -1,8 +1,8 @@
-import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
-import 'package:fitness_clup/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
-import 'package:fitness_clup/variables/routes.dart';
-import 'package:fitness_clup/widgets/register_widgets/fields.dart';
-import 'package:fitness_clup/widgets/register_widgets/register/register_button.dart';
+import 'package:dev_muscle/functions/accountFuncs/accountFuncs.dart';
+import 'package:dev_muscle/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
+import 'package:dev_muscle/variables/routes.dart';
+import 'package:dev_muscle/widgets/register_widgets/fields.dart';
+import 'package:dev_muscle/widgets/register_widgets/register/register_button.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';

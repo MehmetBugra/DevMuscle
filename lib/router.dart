@@ -1,13 +1,13 @@
-import 'package:fitness_clup/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
-import 'package:fitness_clup/pages/main/mainPage.dart';
-import 'package:fitness_clup/pages/main/pages/404.dart';
-import 'package:fitness_clup/pages/main/pages/home/AllWorkoutCategories/allWorkoutCategories.dart';
-import 'package:fitness_clup/pages/workout/Workout.dart';
-import 'package:fitness_clup/pages/main/pages/home/profile/edit_profile.dart';
-import 'package:fitness_clup/pages/main/pages/home/profile/privacyPolicy.dart';
-import 'package:fitness_clup/pages/registerAndLogin/forgotpassword/forgotPassword.dart';
-import 'package:fitness_clup/pages/registerAndLogin/page.dart';
-import 'package:fitness_clup/variables/routes.dart';
+import 'package:dev_muscle/pages/baslangic_ekrani2/GetInfoDefaultPage.dart';
+import 'package:dev_muscle/pages/main/mainPage.dart';
+import 'package:dev_muscle/pages/main/pages/404.dart';
+import 'package:dev_muscle/pages/main/pages/home/AllWorkoutCategories/allWorkoutCategories.dart';
+import 'package:dev_muscle/pages/workout/Workout.dart';
+import 'package:dev_muscle/pages/main/pages/home/profile/edit_profile.dart';
+import 'package:dev_muscle/pages/main/pages/home/profile/privacyPolicy.dart';
+import 'package:dev_muscle/pages/registerAndLogin/forgotpassword/forgotPassword.dart';
+import 'package:dev_muscle/pages/registerAndLogin/page.dart';
+import 'package:dev_muscle/variables/routes.dart';
 import 'package:flutter/cupertino.dart';
 
 class myRouter {

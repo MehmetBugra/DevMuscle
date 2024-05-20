@@ -1,7 +1,6 @@
 // ignore_for_file: prefer_const_constructors, non_constant_identifier_names
 
-import 'package:fitness_clup/pages/main/pages/home/profile/privacyPolicy.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 

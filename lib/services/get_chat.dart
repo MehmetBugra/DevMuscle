@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:cosmos/cosmos.dart';
-import 'package:fitness_clup/variables/chat.dart';
-import 'package:fitness_clup/widgets/chat/message.dart';
+import 'package:dev_muscle/variables/chat.dart';
+import 'package:dev_muscle/widgets/chat/message.dart';
 import 'package:flutter/material.dart';
 
 Future<void> getChatFun(BuildContext context) async {

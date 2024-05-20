@@ -1,6 +1,6 @@
 {
-    "name": "fitness_clup",
-    "short_name": "fitness_clup",
+    "name": "dev_muscle",
+    "short_name": "dev_muscle",
     "start_url": ".",
     "display": "standalone",
     "background_color": "#0175C2",

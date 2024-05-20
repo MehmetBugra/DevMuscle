@@ -1,4 +1,4 @@
-name: fitness_clup
+name: dev_muscle
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -35,24 +35,15 @@ dependencies:
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.6
-  flutter_screenutil: ^5.9.0
-  smooth_page_indicator: ^1.1.0
-  google_fonts: ^6.2.0
-  numberpicker: ^2.1.2
-  form_validator: ^2.1.1
-  cloud_firestore: ^4.17.2
-  firebase_auth: ^4.19.3
-  firebase_core: ^2.30.1
-  flutter_native_splash: ^2.4.0
-  carousel_calendar: ^0.0.2
-  syncfusion_flutter_gauges: ^25.1.42
-  image_picker: ^1.1.1
-  firebase_database: ^10.5.5
+  firebase_auth: ^4.19.5
+  firebase_core: ^2.31.0
   cosmos: ^0.4.1
-  # pedometer: ^4.0.1
-  # elliptical_progress_bar: ^0.0.1+7
-  # table_calendar: ^3.1.1
-  # syncfusion_flutter_calendar: ^25.1.42
+  smooth_page_indicator: ^1.1.0
+  form_validator: ^2.1.1
+  cloud_firestore: ^4.17.3
+  numberpicker: ^2.1.2
+  google_fonts: ^6.2.0
+  syncfusion_flutter_gauges: ^25.2.4
 
 dev_dependencies:
   flutter_test:
@@ -81,7 +72,6 @@ flutter:
     - assets/
     - assets/images/
     - assets/images/loginandRegister/
-    - assets/images/intro/
     - assets/images/WorkoutPlans/
 
   # An image asset can refer to one or more resolution-specific "variants", see
@@ -109,4 +99,3 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
-

@@ -1,14 +1,12 @@
-import "package:firebase_auth/firebase_auth.dart";
-import "package:fitness_clup/components/UIHelper.dart";
-import "package:fitness_clup/components/styles.dart";
-import "package:fitness_clup/functions/accountFuncs/accountFuncs.dart";
-import "package:fitness_clup/pages/registerAndLogin/page.dart";
-import "package:fitness_clup/variables/colors.dart";
-import "package:fitness_clup/variables/routes.dart";
-import "package:fitness_clup/widgets/mainpage_widgets/bottomNavBar.dart";
+import "package:dev_muscle/components/UIHelper.dart";
+import "package:dev_muscle/components/styles.dart";
+import "package:dev_muscle/functions/accountFuncs/accountFuncs.dart";
+import "package:dev_muscle/pages/registerAndLogin/page.dart";
+import "package:dev_muscle/variables/colors.dart";
+import "package:dev_muscle/variables/routes.dart";
+import "package:dev_muscle/widgets/mainpage_widgets/bottomNavBar.dart";
 import "package:flutter/cupertino.dart";
 import "package:flutter/material.dart";
-import "package:flutter_native_splash/flutter_native_splash.dart";
 
 class MainPage extends StatefulWidget {
   MainPage({super.key});
@@ -24,17 +22,7 @@ class _MainPageState extends State<MainPage> {
   @override
   void initState() {
     _userInfoFuture = getUserInfo();
-    initialization();
     super.initState();
-  }
-
-  void initialization() async {
-    print("2 saniye");
-    await Future.delayed(Duration(seconds: 1));
-
-    print("1 saniye");
-    await Future.delayed(Duration(seconds: 1));
-    FlutterNativeSplash.remove();
   }
 
   @override

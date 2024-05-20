@@ -1,7 +1,7 @@
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/functions/accountFuncs/accountFuncs.dart';
-import 'package:fitness_clup/variables/colors.dart';
-import 'package:fitness_clup/widgets/register_widgets/fields.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/functions/accountFuncs/accountFuncs.dart';
+import 'package:dev_muscle/variables/colors.dart';
+import 'package:dev_muscle/widgets/register_widgets/fields.dart';
 import 'package:flutter/material.dart';
 
 class EditProfilePage extends StatelessWidget {

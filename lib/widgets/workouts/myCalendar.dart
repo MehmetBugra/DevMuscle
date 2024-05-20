@@ -1,5 +1,5 @@
-import 'package:fitness_clup/variables/colors.dart';
-import 'package:fitness_clup/widgets/workouts/carouselCal/carouselCal.dart';
+import 'package:dev_muscle/variables/colors.dart';
+import 'package:dev_muscle/widgets/workouts/carouselCal/carouselCal.dart';
 import 'package:flutter/material.dart';
 
 class myCalendar extends StatefulWidget {

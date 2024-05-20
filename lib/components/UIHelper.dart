@@ -1,8 +1,8 @@
-import 'package:fitness_clup/pages/main/pages/chat/chatPage.dart';
-import 'package:fitness_clup/pages/main/pages/home/home.dart';
-import 'package:fitness_clup/pages/main/pages/home/profile/profile.dart';
-import 'package:fitness_clup/pages/main/pages/myWorkouts/workouts.dart';
-import 'package:fitness_clup/widgets/intro_widgets/page.dart';
+import 'package:dev_muscle/pages/main/pages/chat/chatPage.dart';
+import 'package:dev_muscle/pages/main/pages/home/home.dart';
+import 'package:dev_muscle/pages/main/pages/home/profile/profile.dart';
+import 'package:dev_muscle/pages/main/pages/myWorkouts/workouts.dart';
+import 'package:dev_muscle/widgets/intro_widgets/page.dart';
 import 'package:flutter/material.dart';
 
 class UIHelper {

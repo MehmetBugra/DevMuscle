@@ -1,7 +1,7 @@
 import 'package:cosmos/cosmos.dart';
-import 'package:fitness_clup/pages/main/pages/chat/chatPage.dart';
-import 'package:fitness_clup/variables/chat.dart';
-import 'package:fitness_clup/variables/colors.dart';
+import 'package:dev_muscle/pages/main/pages/chat/chatPage.dart';
+import 'package:dev_muscle/variables/chat.dart';
+import 'package:dev_muscle/variables/colors.dart';
 import 'package:flutter/material.dart';
 
 Future<void> deleteMessage(BuildContext context, String id) async {

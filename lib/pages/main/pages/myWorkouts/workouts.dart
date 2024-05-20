@@ -1,14 +1,14 @@
 // ignore_for_file: must_be_immutable
 
-import 'package:fitness_clup/components/styles.dart';
-import 'package:fitness_clup/functions/foods/foods.dart';
-import 'package:fitness_clup/pages/main/pages/myWorkouts/addFoodPage.dart';
-import 'package:fitness_clup/variables/colors.dart';
-import 'package:fitness_clup/widgets/workouts/calories.dart';
-import 'package:fitness_clup/widgets/workouts/circle.dart';
-import 'package:fitness_clup/widgets/workouts/eatenFoods.dart';
-import 'package:fitness_clup/widgets/workouts/finishedWorkouts.dart';
-import 'package:fitness_clup/widgets/workouts/myCalendar.dart';
+import 'package:dev_muscle/components/styles.dart';
+import 'package:dev_muscle/functions/foods/foods.dart';
+import 'package:dev_muscle/pages/main/pages/myWorkouts/addFoodPage.dart';
+import 'package:dev_muscle/variables/colors.dart';
+import 'package:dev_muscle/widgets/workouts/calories.dart';
+import 'package:dev_muscle/widgets/workouts/circle.dart';
+import 'package:dev_muscle/widgets/workouts/eatenFoods.dart';
+import 'package:dev_muscle/widgets/workouts/finishedWorkouts.dart';
+import 'package:dev_muscle/widgets/workouts/myCalendar.dart';
 import 'package:flutter/material.dart';
 
 class WorkoutsPage extends StatefulWidget {
